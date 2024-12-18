@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+
+  background-color: #ffffff;
+  border: 1px solid #c8c8c8;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.titleandicon {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 0vw;
+  text-decoration: none;
+}
+
+.titleandicon .icon {
+  font-size: min(max(2.5vw,25px), 40px);
+  font-weight: 600;
+  text-shadow: 0px 0px 3px blue;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #13348c;
+  text-shadow: 0px 0px 2px #13348c;
+}
+
+.title .chinese {
+  font-size: min(max(1.5vw,15px), 24px);
+  font-weight: 500;
+}
+
+.title .english {
+  font-size: min(max(1.06vw,10px), 17px);
+}
+
+.types {
+  display: flex;
+  font-weight: bold;
+}
+
+.types1 .type {
+  position: relative;
+  margin: 0 20px 0 0px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #91989b;
+  text-shadow: 0px 0px 1px #070d18;
+  transition: all 0.5s;
+}
+
+.types1 .type:hover {
+  color: #29478d;
+  text-shadow: 0px 0px 1px #29478d;
+}
+
+.types1 .type::before {
+  content: "";
+  position: absolute;
+  bottom: -0.3em;
+  left: 5%;
+
+  width: 0%;
+  height: 5px;
+  background: orange;
+
+  transition: all 0.5s;
+}
+
+.types1 .type:hover::before {
+  width: 85%;
+}
+
+.types1 .hightlight {
+  color: #29478d;
+  text-shadow: 0px 0px 1px #29478d;
+}
+
+.types2 {
+    display: none;
+    margin-right: 10px;
+}
+
+@media (max-width: 950px) {
+    .types1{
+        display: none;
+    }
+    .types2 {
+        display: inline-block;
+    }
+}
+
+.search {
+  position: relative;
+  align-items: center;
+
+  :deep(.el-input__inner) {
+    height: 30px;
+    width: 150px;
+  }
+  .el-button {
+    background-color: #29478d;
+  }
+}
+
+.search .search-input {
+  display: none;
+
+  position: absolute;
+  bottom: -225%;
+  right: -10px;
+  padding: 10px;
+
+  border-radius: 1em;
+  border: 1px solid #c8c8c8;
+
+  background-color: #ffffff;
+}
+
+.search .search-text {
+  width: 250px;
+  padding: 10px;
+  border-radius: 1em;
+}
+
+.search .search-button {
+  position: absolute;
+
+  font-size: 1.2em;
+  border-radius: 50%;
+
+  right: 5%;
+  top: 25%;
+}

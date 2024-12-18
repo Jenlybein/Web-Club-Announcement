@@ -1,0 +1,18 @@
+.seeDetails {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      span {
+        padding-right: 15px;
+        font-size: 14px;
+        color: #8d91aa;
+      }
+      p {
+        font-size: 14px;
+        color: #2b2e30;
+      }
+    }
+  }
